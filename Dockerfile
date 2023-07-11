@@ -6,4 +6,6 @@ RUN     apt-get update && apt-get install -y unzip at nano vim wget curl atomicp
 RUN     wget http://rfriends.s1009.xrea.com/files3/rfriends3_latest_script.zip && \
         unzip -q -o rfriends3_latest_script.zip
 
+EXPOSE  8000
+
 ENTRYPOINT [ "sh", "/app/rfriends3/rfriends3_server.sh" ]
