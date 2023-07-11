@@ -8,4 +8,5 @@ RUN     wget http://rfriends.s1009.xrea.com/files3/rfriends3_latest_script.zip &
 
 EXPOSE  8000
 
-ENTRYPOINT [ "sh", "/app/rfriends3/rfriends3_server.sh" ]
+COPY    startup.sh .
+ENTRYPOINT [ "sh", "startup.sh" ]
